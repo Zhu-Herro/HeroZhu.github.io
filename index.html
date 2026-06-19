@@ -1,30 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hero Zhu - Personal Academic Homepage</title>
-<meta name="description" content="Hero Zhu - Personal Academic Homepage">
-<meta name="author" content="Hero Zhu">
+<title>祝英雄 | Yingxiong Zhu - Personal Homepage</title>
+<meta name="description" content="祝英雄 (Yingxiong Zhu) - 深圳理工大学·深圳大学联合培养硕士研究生 | AI for Science, Biomedical Engineering">
+<meta name="author" content="Yingxiong Zhu">
 <link rel="icon" type="image/png" href="images/favicon.ico">
 <style>
 /* ============ CSS Variables ============ */
 :root {
-  --bg: #f8f9fb;
+  --bg: #f5f6fa;
   --bg-card: #ffffff;
-  --bg-nav: rgba(255,255,255,0.92);
-  --text: #2c3e50;
-  --text-muted: #6b7c93;
-  --text-light: #9aa9b9;
-  --accent: #2c6fce;
-  --accent-light: #4d8ef7;
-  --accent-glow: rgba(44,111,206,0.12);
-  --accent-soft: #e8f0fe;
-  --border: #e8ecf1;
-  --border-light: #f0f2f5;
-  --shadow-sm: 0 1px 3px rgba(0,0,0,0.04);
-  --shadow: 0 4px 16px rgba(0,0,0,0.06);
-  --shadow-lg: 0 12px 40px rgba(0,0,0,0.08);
+  --bg-nav: rgba(255,255,255,0.88);
+  --text: #1e293b;
+  --text-muted: #64748b;
+  --text-light: #94a3b8;
+  --accent: #2563eb;
+  --accent-light: #3b82f6;
+  --accent-soft: #eff6ff;
+  --accent-glow: rgba(37,99,235,0.10);
+  --border: #e2e8f0;
+  --border-light: #f1f5f9;
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.04);
+  --shadow: 0 4px 16px rgba(0,0,0,0.05);
+  --shadow-lg: 0 12px 40px rgba(0,0,0,0.07);
   --radius: 12px;
   --radius-sm: 8px;
   --radius-lg: 16px;
@@ -32,8 +32,7 @@
   --sidebar-width: 280px;
   --max-width: 1200px;
   --transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-  --font-sans: 'Inter', 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif;
-  --font-mono: 'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace;
+  --font-sans: 'Inter', 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', system-ui, -apple-system, sans-serif;
 }
 
 /* ============ Reset & Base ============ */
@@ -43,7 +42,7 @@ body {
   font-family: var(--font-sans);
   background: var(--bg);
   color: var(--text);
-  line-height: 1.7;
+  line-height: 1.75;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -51,62 +50,41 @@ body {
 a { color: var(--accent); text-decoration: none; transition: var(--transition); }
 a:hover { color: var(--accent-light); }
 img { max-width: 100%; display: block; }
-ul, ol { padding-left: 1.5em; }
-h1, h2, h3, h4, h5 { line-height: 1.3; font-weight: 700; color: var(--text); }
-h2 { font-size: 1.5rem; margin-bottom: 1.2rem; padding-bottom: 0.6rem; border-bottom: 2px solid var(--border); }
+h1, h2, h3, h4 { line-height: 1.35; font-weight: 700; color: var(--text); }
+h2 { font-size: 1.4rem; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--border); display: flex; align-items: center; gap: 8px; }
 
 /* ============ Layout ============ */
 .page-wrapper {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 0 24px;
-  display: flex;
-  gap: 40px;
-  min-height: 100vh;
+  max-width: var(--max-width); margin: 0 auto; padding: 0 24px;
+  display: flex; gap: 40px; min-height: 100vh;
 }
 
 /* ============ Sidebar ============ */
 .sidebar {
-  width: var(--sidebar-width);
-  flex-shrink: 0;
+  width: var(--sidebar-width); flex-shrink: 0;
   padding-top: calc(var(--nav-height) + 32px);
-  position: sticky;
-  top: 0;
-  height: 100vh;
-  overflow-y: auto;
+  position: sticky; top: 0; height: 100vh; overflow-y: auto;
 }
 .sidebar-inner {
-  text-align: center;
-  padding: 32px 20px;
-  background: var(--bg-card);
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow-sm);
+  text-align: center; padding: 32px 20px;
+  background: var(--bg-card); border-radius: var(--radius-lg);
+  border: 1px solid var(--border); box-shadow: var(--shadow-sm);
 }
 .sidebar-avatar {
   width: 130px; height: 130px; border-radius: 50%;
-  object-fit: cover; margin: 0 auto 18px;
+  margin: 0 auto 18px; object-fit: cover;
   border: 3px solid var(--border);
-  background: var(--accent-soft);
-}
-.sidebar-avatar-placeholder {
-  width: 130px; height: 130px; border-radius: 50%;
-  margin: 0 auto 18px;
-  background: linear-gradient(135deg, var(--accent), var(--accent-light));
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
   display: flex; align-items: center; justify-content: center;
   font-size: 44px; color: #fff; font-weight: 700;
 }
-.sidebar-name {
-  font-size: 1.3rem; font-weight: 700; margin-bottom: 4px;
-}
-.sidebar-affil {
-  font-size: 0.82rem; color: var(--text-muted); margin-bottom: 4px; line-height: 1.5;
-}
-.sidebar-location {
-  font-size: 0.78rem; color: var(--text-light); margin-bottom: 16px;
-}
+.sidebar-name { font-size: 1.35rem; font-weight: 800; margin-bottom: 4px; }
+.sidebar-name-en { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 8px; font-weight: 500; }
+.sidebar-title { font-size: 0.8rem; color: var(--accent); font-weight: 600; margin-bottom: 8px; }
+.sidebar-affil { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 2px; line-height: 1.5; }
+.sidebar-location { font-size: 0.76rem; color: var(--text-light); margin-bottom: 14px; }
 .sidebar-links {
-  display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin-top: 16px;
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin-top: 14px;
 }
 .sidebar-link {
   display: inline-flex; align-items: center; gap: 4px;
@@ -116,29 +94,24 @@ h2 { font-size: 1.5rem; margin-bottom: 1.2rem; padding-bottom: 0.6rem; border-bo
   transition: var(--transition);
 }
 .sidebar-link:hover { background: var(--accent); color: #fff; }
-
 .sidebar-stats {
-  margin-top: 20px; padding-top: 16px;
+  margin-top: 18px; padding-top: 14px;
   border-top: 1px solid var(--border-light);
-  display: flex; justify-content: center; gap: 20px;
+  display: flex; justify-content: center; gap: 24px;
 }
 .sidebar-stat { text-align: center; }
-.sidebar-stat-num { font-size: 1.4rem; font-weight: 800; color: var(--accent); }
+.sidebar-stat-num { font-size: 1.35rem; font-weight: 800; color: var(--accent); }
 .sidebar-stat-label { font-size: 0.7rem; color: var(--text-light); text-transform: uppercase; letter-spacing: 0.5px; }
 
 /* ============ Main Content ============ */
 .main-content {
   flex: 1; min-width: 0;
-  padding-top: calc(var(--nav-height) + 32px);
-  padding-bottom: 80px;
+  padding-top: calc(var(--nav-height) + 32px); padding-bottom: 80px;
 }
 .section-card {
-  background: var(--bg-card);
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--border);
-  padding: 32px;
-  margin-bottom: 28px;
-  box-shadow: var(--shadow-sm);
+  background: var(--bg-card); border-radius: var(--radius-lg);
+  border: 1px solid var(--border); padding: 30px 32px;
+  margin-bottom: 24px; box-shadow: var(--shadow-sm);
   transition: box-shadow var(--transition);
 }
 .section-card:hover { box-shadow: var(--shadow); }
@@ -158,12 +131,23 @@ h2 { font-size: 1.5rem; margin-bottom: 1.2rem; padding-bottom: 0.6rem; border-bo
   max-width: var(--max-width); margin: 0 auto; padding: 0 24px;
   height: 100%; display: flex; align-items: center; justify-content: space-between;
 }
-.nav-logo { font-size: 1.15rem; font-weight: 800; color: var(--text); letter-spacing: -0.3px; }
+.nav-brand { display: flex; align-items: center; gap: 8px; }
+.nav-logo { font-size: 1.1rem; font-weight: 800; color: var(--text); letter-spacing: -0.3px; }
 .nav-logo span { color: var(--accent); }
-.nav-links { display: flex; list-style: none; gap: 6px; padding: 0; align-items: center; }
+.nav-right { display: flex; align-items: center; gap: 12px; }
+.lang-toggle {
+  font-size: 0.78rem; font-weight: 600; padding: 6px 14px;
+  border: 1.5px solid var(--border); border-radius: 20px;
+  background: var(--bg-card); color: var(--text-muted); cursor: pointer;
+  transition: var(--transition); white-space: nowrap;
+}
+.lang-toggle:hover { border-color: var(--accent); color: var(--accent); }
+.lang-toggle .divider { color: var(--text-light); margin: 0 2px; }
+.lang-toggle .active-lang { color: var(--accent); font-weight: 700; }
+.nav-links { display: flex; list-style: none; gap: 4px; padding: 0; align-items: center; }
 .nav-links a {
-  font-size: 0.82rem; font-weight: 500; color: var(--text-muted);
-  padding: 6px 14px; border-radius: 20px; transition: var(--transition);
+  font-size: 0.8rem; font-weight: 500; color: var(--text-muted);
+  padding: 6px 12px; border-radius: 18px; transition: var(--transition);
 }
 .nav-links a:hover, .nav-links a.active { color: var(--accent); background: var(--accent-soft); }
 .menu-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
@@ -171,70 +155,37 @@ h2 { font-size: 1.5rem; margin-bottom: 1.2rem; padding-bottom: 0.6rem; border-bo
 .menu-toggle.open span:nth-child(1) { transform: rotate(45deg) translate(5px,5px); }
 .menu-toggle.open span:nth-child(2) { opacity: 0; }
 .menu-toggle.open span:nth-child(3) { transform: rotate(-45deg) translate(5px,-5px); }
-.nav-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.3); z-index: 999; }
+.nav-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.25); z-index: 999; }
 
-/* ============ News ============ */
-.news-list { list-style: none; padding: 0; }
-.news-item {
-  display: flex; gap: 14px; padding: 10px 0;
-  border-bottom: 1px solid var(--border-light); font-size: 0.92rem;
+/* ============ Research Tags ============ */
+.research-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+.research-tag {
+  font-size: 0.82rem; padding: 6px 16px; border-radius: 20px;
+  background: var(--accent-soft); color: var(--accent);
+  font-weight: 500; border: 1px solid rgba(37,99,235,0.1);
 }
-.news-item:last-child { border-bottom: none; }
-.news-date {
-  flex-shrink: 0; font-size: 0.78rem; font-weight: 600;
-  color: var(--accent); background: var(--accent-soft);
-  padding: 2px 10px; border-radius: 12px; white-space: nowrap;
-  height: fit-content;
-}
-
-/* ============ Publications ============ */
-.paper-box {
-  display: flex; gap: 20px; margin-bottom: 20px;
-  padding: 20px; background: var(--bg); border-radius: var(--radius);
-  border: 1px solid var(--border-light); transition: var(--transition);
-}
-.paper-box:hover { box-shadow: var(--shadow-sm); border-color: var(--border); }
-.paper-box-image {
-  flex-shrink: 0; width: 200px; border-radius: var(--radius-sm); overflow: hidden;
-  position: relative; background: var(--accent-soft);
-}
-.paper-box-image img { width: 100%; object-fit: cover; }
-.paper-badge {
-  position: absolute; top: 8px; left: 8px;
-  font-size: 0.7rem; font-weight: 700; padding: 3px 10px;
-  background: var(--accent); color: #fff; border-radius: 4px;
-}
-.paper-box-text { flex: 1; min-width: 0; }
-.paper-box-text h4 { font-size: 1.05rem; margin-bottom: 4px; }
-.paper-box-text .authors { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 6px; }
-.paper-box-text .authors strong { color: var(--text); }
-.paper-box-text .paper-links { display: flex; gap: 12px; flex-wrap: wrap; font-size: 0.82rem; }
-.paper-box-text p { font-size: 0.85rem; color: var(--text-muted); margin-top: 6px; }
-.pub-list { list-style: none; padding: 0; }
-.pub-list li {
-  padding: 10px 0; border-bottom: 1px solid var(--border-light); font-size: 0.9rem;
-}
-.pub-list li:last-child { border-bottom: none; }
-.pub-venue { font-weight: 700; font-size: 0.78rem; color: var(--accent); }
 
 /* ============ Timeline ============ */
 .timeline { list-style: none; padding: 0; position: relative; }
 .timeline::before {
-  content: ''; position: absolute; left: 9px; top: 0; bottom: 0;
+  content: ''; position: absolute; left: 11px; top: 0; bottom: 0;
   width: 2px; background: var(--border);
 }
 .timeline-item {
-  position: relative; padding-left: 32px; margin-bottom: 18px;
+  position: relative; padding-left: 36px; margin-bottom: 20px;
 }
+.timeline-item:last-child { margin-bottom: 0; }
 .timeline-item::before {
-  content: ''; position: absolute; left: 0; top: 5px;
-  width: 20px; height: 20px; border-radius: 50%;
-  background: var(--bg-card); border: 2px solid var(--accent);
+  content: ''; position: absolute; left: 0; top: 4px;
+  width: 24px; height: 24px; border-radius: 50%;
+  background: var(--bg-card); border: 2.5px solid var(--accent);
+  box-shadow: 0 0 0 4px var(--accent-soft);
 }
 .timeline-date {
-  font-size: 0.78rem; font-weight: 600; color: var(--accent); margin-bottom: 2px;
+  font-size: 0.78rem; font-weight: 700; color: var(--accent); margin-bottom: 3px;
 }
-.timeline-text { font-size: 0.9rem; }
+.timeline-title { font-weight: 700; font-size: 0.95rem; }
+.timeline-desc { font-size: 0.85rem; color: var(--text-muted); margin-top: 2px; }
 
 /* ============ Back to Top ============ */
 .back-to-top {
@@ -244,54 +195,43 @@ h2 { font-size: 1.5rem; margin-bottom: 1.2rem; padding-bottom: 0.6rem; border-bo
   display: flex; align-items: center; justify-content: center;
   font-size: 18px; opacity: 0; visibility: hidden;
   transform: translateY(8px); transition: var(--transition);
-  box-shadow: 0 4px 16px rgba(44,111,206,0.3);
+  box-shadow: 0 4px 16px rgba(37,99,235,0.3);
 }
 .back-to-top.show { opacity: 1; visibility: visible; transform: translateY(0); }
 .back-to-top:hover { background: var(--accent-light); transform: translateY(-2px); }
 
-/* ============ Scholar Stats ============ */
-.citation-count { font-weight: 700; color: var(--accent); }
-.google-scholar-badge { margin-top: 8px; display: flex; justify-content: center; }
-.google-scholar-badge img { height: 20px; }
+/* ============ Footer ============ */
+.footer { text-align: center; padding: 20px; color: var(--text-light); font-size: 0.78rem; border-top: 1px solid var(--border-light); }
 
 /* ============ Responsive ============ */
 @media (max-width: 900px) {
   .page-wrapper { flex-direction: column; gap: 0; }
-  .sidebar {
-    width: 100%; position: static; height: auto;
-    padding-top: calc(var(--nav-height) + 16px);
-  }
-  .sidebar-inner { display: flex; gap: 20px; text-align: left; align-items: center; padding: 20px; }
-  .sidebar-avatar-placeholder, .sidebar-avatar { width: 72px; height: 72px; font-size: 26px; margin: 0; flex-shrink: 0; }
-  .sidebar-info { flex: 1; }
+  .sidebar { width: 100%; position: static; height: auto; padding-top: calc(var(--nav-height) + 12px); }
+  .sidebar-inner { display: flex; gap: 18px; text-align: left; align-items: center; padding: 20px; }
+  .sidebar-avatar { width: 68px; height: 68px; font-size: 24px; margin: 0; flex-shrink: 0; }
+  .sidebar-info { flex: 1; min-width: 0; }
   .sidebar-links { justify-content: flex-start; }
   .sidebar-stats { justify-content: flex-start; }
-  .main-content { padding-top: 16px; }
-
-  .paper-box { flex-direction: column; }
-  .paper-box-image { width: 100%; max-height: 180px; }
-
+  .main-content { padding-top: 12px; }
   .menu-toggle { display: block; }
   .nav-links {
     position: fixed; top: 0; right: -100%;
     width: 70vw; max-width: 300px; height: 100vh;
     background: var(--bg-card); flex-direction: column;
-    padding: 80px 24px 24px; gap: 4px;
+    padding: 80px 20px 24px; gap: 2px;
     transition: right 0.35s cubic-bezier(0.4,0,0.2,1);
     box-shadow: -8px 0 30px rgba(0,0,0,0.1); z-index: 1001;
     border-left: 1px solid var(--border);
   }
   .nav-links.open { right: 0; }
-  .nav-links a { font-size: 1rem; padding: 12px 16px; border-radius: 8px; display: block; }
+  .nav-links a { font-size: 0.95rem; padding: 12px 16px; border-radius: 8px; display: block; }
   .nav-overlay.open { display: block; }
 }
-
 @media (max-width: 480px) {
   .sidebar-inner { flex-direction: column; text-align: center; }
-  .sidebar-links { justify-content: center; }
-  .sidebar-stats { justify-content: center; }
-  .section-card { padding: 20px; }
-  .paper-box { padding: 14px; }
+  .sidebar-links, .sidebar-stats { justify-content: center; }
+  .section-card { padding: 20px 18px; }
+  .nav-right { gap: 6px; }
 }
 </style>
 </head>
@@ -300,18 +240,23 @@ h2 { font-size: 1.5rem; margin-bottom: 1.2rem; padding-bottom: 0.6rem; border-bo
 <!-- ==================== Navbar ==================== -->
 <nav class="navbar">
   <div class="navbar-inner">
-    <a href="#" class="nav-logo">Hero<span>Zhu</span></a>
-    <button class="menu-toggle" id="menuToggle" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
+    <div class="nav-brand">
+      <a href="#" class="nav-logo" data-i18n="nav.brand">祝英雄<span>·</span>HeroZhu</a>
+    </div>
+    <div class="nav-right">
+      <button class="lang-toggle" id="langToggle" aria-label="Switch language">
+        <span class="active-lang">中</span><span class="divider">/</span><span>EN</span>
+      </button>
+      <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
     <ul class="nav-links" id="navLinks">
-      <li><a href="#about-me" class="active">About</a></li>
-      <li><a href="#-news">News</a></li>
-      <li><a href="#-publications">Publications</a></li>
-      <li><a href="#-honors-and-awards">Honors</a></li>
-      <li><a href="#-educations">Education</a></li>
-      <li><a href="#-invited-talks">Talks</a></li>
-      <li><a href="#-internships">Internships</a></li>
+      <li><a href="#about" data-i18n="nav.about">关于</a></li>
+      <li><a href="#research" data-i18n="nav.research">研究方向</a></li>
+      <li><a href="#education" data-i18n="nav.education">教育背景</a></li>
+      <li><a href="#honors" data-i18n="nav.honors">获奖荣誉</a></li>
+      <li><a href="#contact" data-i18n="nav.contact">联系方式</a></li>
     </ul>
   </div>
 </nav>
@@ -323,24 +268,27 @@ h2 { font-size: 1.5rem; margin-bottom: 1.2rem; padding-bottom: 0.6rem; border-bo
   <!-- SIDEBAR -->
   <aside class="sidebar">
     <div class="sidebar-inner">
-      <div class="sidebar-avatar-placeholder">HZ</div>
+      <div class="sidebar-avatar">Y.Z</div>
       <div class="sidebar-info">
-        <div class="sidebar-name">Hero Zhu</div>
-        <div class="sidebar-affil">Lorem ipsum College</div>
-        <div class="sidebar-location">📍 Beijing, China</div>
+        <div class="sidebar-name" data-i18n="sidebar.name">祝英雄</div>
+        <div class="sidebar-name-en" data-i18n="sidebar.nameEn">Yingxiong Zhu</div>
+        <div class="sidebar-title" data-i18n="sidebar.title">AI for Science 研究者</div>
+        <div class="sidebar-affil" data-i18n="sidebar.affil">深圳理工大学 · 深圳大学（联合培养）</div>
+        <div class="sidebar-affil" data-i18n="sidebar.dept">生物医学工程 · 人工智能交叉</div>
+        <div class="sidebar-location">📍 <span data-i18n="sidebar.location">深圳，中国</span></div>
         <div class="sidebar-links">
-          <a href="mailto:Lorem@ipsum.com" class="sidebar-link" title="Email">📧 Email</a>
-          <a href="https://scholar.google.com/citations?user=YOUR_ID" class="sidebar-link" title="Google Scholar">🎓 Scholar</a>
-          <a href="https://github.com" class="sidebar-link" title="GitHub">💻 GitHub</a>
+          <a href="mailto:yingxiong.zhu@example.com" class="sidebar-link">📧 Email</a>
+          <a href="#" class="sidebar-link">💻 GitHub</a>
+          <a href="#" class="sidebar-link" data-i18n="sidebar.scholar">🎓 谷歌学术</a>
         </div>
         <div class="sidebar-stats">
           <div class="sidebar-stat">
-            <div class="sidebar-stat-num" id="totalCitations">—</div>
-            <div class="sidebar-stat-label">Citations</div>
+            <div class="sidebar-stat-num">SUAT</div>
+            <div class="sidebar-stat-label" data-i18n="sidebar.stat1">深圳理工</div>
           </div>
           <div class="sidebar-stat">
-            <div class="sidebar-stat-num">100+</div>
-            <div class="sidebar-stat-label">Papers</div>
+            <div class="sidebar-stat-num">SZU</div>
+            <div class="sidebar-stat-label" data-i18n="sidebar.stat2">深圳大学</div>
           </div>
         </div>
       </div>
@@ -351,182 +299,324 @@ h2 { font-size: 1.5rem; margin-bottom: 1.2rem; padding-bottom: 0.6rem; border-bo
   <main class="main-content">
 
     <!-- ====== About Me ====== -->
-    <span class="anchor" id="about-me"></span>
+    <span class="anchor" id="about"></span>
     <div class="section-card">
-      <h2>👋 About Me</h2>
-      <p style="font-size:0.95rem;margin-bottom:10px;">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. Suspendisse condimentum, libero vel tempus mattis, risus risus vulputate libero, elementum fermentum mi neque vel nisl. Maecenas facilisis maximus dignissim.
+      <h2>👋 <span data-i18n="about.title">关于我</span></h2>
+      <p style="font-size:0.93rem;margin-bottom:10px;" data-i18n="about.p1">
+        我是祝英雄，2025级硕士研究生，由深圳理工大学（SUAT）与深圳大学（SZU）联合培养，专业为生物医学工程，研究方向聚焦人工智能交叉（AI for Science）。导师为尤志峰教授。
       </p>
-      <p style="font-size:0.95rem;">
-        My research interest includes <strong>neural machine translation</strong> and <strong>computer vision</strong>. I have published more than 100 papers at top international AI conferences.
+      <p style="font-size:0.93rem;margin-bottom:10px;" data-i18n="about.p2">
+        目前主攻人工智能赋能组织工程，具体包括：组织三维结构分析、电生理信号解码、基于RAG结合药物库的药物筛选等方向。同时，我对AI Agent领域也有浓厚兴趣。
+      </p>
+      <p style="font-size:0.93rem;" data-i18n="about.p3">
+        我致力于将前沿AI技术与生物医学问题深度融合，期望通过计算方法加速科学发现，为精准医疗和再生医学贡献力量。
       </p>
     </div>
 
-    <!-- ====== News ====== -->
-    <span class="anchor" id="-news"></span>
+    <!-- ====== Research Interests ====== -->
+    <span class="anchor" id="research"></span>
     <div class="section-card">
-      <h2>🔥 News</h2>
-      <ul class="news-list">
-        <li class="news-item"><span class="news-date">2022.02</span><span>🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum.</span></li>
-        <li class="news-item"><span class="news-date">2022.01</span><span>🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span></li>
-        <li class="news-item"><span class="news-date">2021.12</span><span>📄 Paper accepted at AAAI 2022. Congratulations to all co-authors!</span></li>
-        <li class="news-item"><span class="news-date">2021.09</span><span>🏆 Received the Best Paper Award at ICCV 2021.</span></li>
-      </ul>
+      <h2>🔬 <span data-i18n="research.title">研究方向</span></h2>
+
+      <h3 style="font-size:1.05rem;margin-bottom:10px;" data-i18n="research.mainTitle">人工智能赋能组织工程 (AI-driven Tissue Engineering)</h3>
+      <div class="research-tags">
+        <span class="research-tag" data-i18n="research.tag1">组织三维结构分析</span>
+        <span class="research-tag" data-i18n="research.tag2">电生理信号解码</span>
+        <span class="research-tag" data-i18n="research.tag3">RAG+药物库 · 药物筛选</span>
+        <span class="research-tag" data-i18n="research.tag4">AI for Science</span>
+        <span class="research-tag" data-i18n="research.tag5">AI Agent</span>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:20px;">
+        <div style="padding:18px;background:var(--bg);border-radius:var(--radius-sm);border:1px solid var(--border-light);">
+          <div style="font-size:1.3rem;margin-bottom:6px;">🧫</div>
+          <h4 style="font-size:0.92rem;margin-bottom:4px;" data-i18n="research.card1.title">组织三维结构分析</h4>
+          <p style="font-size:0.82rem;color:var(--text-muted);line-height:1.6;" data-i18n="research.card1.desc">
+            利用深度学习与计算机视觉技术，对组织工程中的三维细胞支架、类器官等结构进行高通量分析与形态学量化。
+          </p>
+        </div>
+        <div style="padding:18px;background:var(--bg);border-radius:var(--radius-sm);border:1px solid var(--border-light);">
+          <div style="font-size:1.3rem;margin-bottom:6px;">⚡</div>
+          <h4 style="font-size:0.92rem;margin-bottom:4px;" data-i18n="research.card2.title">电生理信号解码</h4>
+          <p style="font-size:0.82rem;color:var(--text-muted);line-height:1.6;" data-i18n="research.card2.desc">
+            应用信号处理和机器学习方法，对神经电生理、肌电等多模态生物电信号进行解码与模式识别。
+          </p>
+        </div>
+        <div style="padding:18px;background:var(--bg);border-radius:var(--radius-sm);border:1px solid var(--border-light);">
+          <div style="font-size:1.3rem;margin-bottom:6px;">💊</div>
+          <h4 style="font-size:0.92rem;margin-bottom:4px;" data-i18n="research.card3.title">RAG+药物库筛选</h4>
+          <p style="font-size:0.82rem;color:var(--text-muted);line-height:1.6;" data-i18n="research.card3.desc">
+            结合检索增强生成（RAG）与大规模药物数据库，构建智能药物筛选系统，加速候选药物发现。
+          </p>
+        </div>
+      </div>
     </div>
 
-    <!-- ====== Publications ====== -->
-    <span class="anchor" id="-publications"></span>
+    <!-- ====== Education ====== -->
+    <span class="anchor" id="education"></span>
     <div class="section-card">
-      <h2>📝 Selected Publications</h2>
-
-      <!-- Paper 1 -->
-      <div class="paper-box">
-        <div class="paper-box-image">
-          <span class="paper-badge">CVPR 2024</span>
-          <img src="images/500x300.png" alt="paper thumbnail" onerror="this.style.display='none';this.parentElement.style.minHeight='130px'">
-        </div>
-        <div class="paper-box-text">
-          <h4><a href="#">Towards Robust Visual Understanding with Multi-Modal Large Language Models</a></h4>
-          <div class="authors"><strong>Hero Zhu</strong>, Coauthor A, Coauthor B</div>
-          <div class="paper-links">
-            <a href="#">📄 PDF</a>
-            <a href="#">🔗 Code</a>
-            <a href="#">📊 Project Page</a>
+      <h2>📖 <span data-i18n="education.title">教育背景</span></h2>
+      <ul class="timeline">
+        <li class="timeline-item">
+          <div class="timeline-date">2025.09 – 2028.06</div>
+          <div class="timeline-title" data-i18n="education.master.title">生物医学工程硕士</div>
+          <div class="timeline-desc">
+            <span data-i18n="education.master.school">深圳大学（与深圳理工大学联合培养，Full study at SUAT）</span><br>
+            <span style="color:var(--text-muted);font-size:0.82rem;" data-i18n="education.master.detail">人工智能交叉方向 · AI for Science · 导师：尤志峰教授</span>
           </div>
-          <p>Proposed a novel framework combining vision and language models for robust scene understanding.</p>
-        </div>
-      </div>
-
-      <!-- Paper 2 -->
-      <div class="paper-box">
-        <div class="paper-box-image">
-          <span class="paper-badge">NeurIPS 2023</span>
-          <img src="images/500x300.png" alt="paper thumbnail" onerror="this.style.display='none';this.parentElement.style.minHeight='130px'">
-        </div>
-        <div class="paper-box-text">
-          <h4><a href="#">Efficient Neural Architecture Search for Resource-Constrained Edge Devices</a></h4>
-          <div class="authors">Coauthor A, <strong>Hero Zhu</strong>, Coauthor C</div>
-          <div class="paper-links">
-            <a href="#">📄 PDF</a>
-            <a href="#">🔗 Code</a>
+        </li>
+        <li class="timeline-item">
+          <div class="timeline-date">2021.09 – 2025.06</div>
+          <div class="timeline-title" data-i18n="education.bachelor.title">智能医学工程学士</div>
+          <div class="timeline-desc">
+            <span data-i18n="education.bachelor.school">深圳技术大学</span><br>
+            <span style="color:var(--text-muted);font-size:0.82rem;" data-i18n="education.bachelor.detail">智能医学工程专业</span>
           </div>
-          <p>Developed an efficient NAS pipeline that reduces search cost by 80% while maintaining accuracy.</p>
-        </div>
-      </div>
-
-      <!-- More publications in list form -->
-      <h3 style="font-size:1.1rem;margin-top:24px;margin-bottom:12px;">All Publications</h3>
-      <ul class="pub-list">
-        <li>
-          <a href="#">Deep Residual Learning for Image Recognition</a>,
-          <strong>Kaiming He</strong>, Xiangyu Zhang, Shaoqing Ren, Jian Sun
-          <br><span class="pub-venue">CVPR 2016</span>
-        </li>
-        <li>
-          <a href="#">Attention Is All You Need</a>,
-          Ashish Vaswani, Noam Shazeer, Niki Parmar, et al.
-          <br><span class="pub-venue">NeurIPS 2017</span>
-        </li>
-        <li>
-          <a href="#">Language Models are Few-Shot Learners</a>,
-          Tom Brown, Benjamin Mann, Nick Ryder, et al.
-          <br><span class="pub-venue">NeurIPS 2020</span>
         </li>
       </ul>
     </div>
 
     <!-- ====== Honors & Awards ====== -->
-    <span class="anchor" id="-honors-and-awards"></span>
+    <span class="anchor" id="honors"></span>
     <div class="section-card">
-      <h2>🎖 Honors and Awards</h2>
+      <h2>🎖 <span data-i18n="honors.title">获奖荣誉</span></h2>
       <ul class="timeline">
         <li class="timeline-item">
-          <div class="timeline-date">2024.06</div>
-          <div class="timeline-text">Outstanding Doctoral Dissertation Award, Lorem ipsum University</div>
-        </li>
-        <li class="timeline-item">
-          <div class="timeline-date">2023.09</div>
-          <div class="timeline-text">Best Paper Honorable Mention, ICCV 2023</div>
-        </li>
-        <li class="timeline-item">
-          <div class="timeline-date">2022.06</div>
-          <div class="timeline-text">Google PhD Fellowship in Machine Learning</div>
-        </li>
-        <li class="timeline-item">
-          <div class="timeline-date">2021.10</div>
-          <div class="timeline-text">National Scholarship for Outstanding Graduate Students</div>
+          <div class="timeline-date">2024</div>
+          <div class="timeline-title" data-i18n="honors.award1.title">文体优等生奖学金</div>
+          <div class="timeline-desc" data-i18n="honors.award1.desc">深圳技术大学</div>
         </li>
       </ul>
     </div>
 
-    <!-- ====== Education ====== -->
-    <span class="anchor" id="-educations"></span>
+    <!-- ====== Contact ====== -->
+    <span class="anchor" id="contact"></span>
     <div class="section-card">
-      <h2>📖 Education</h2>
-      <ul class="timeline">
-        <li class="timeline-item">
-          <div class="timeline-date">2022.09 - Present</div>
-          <div class="timeline-text"><strong>Ph.D. in Computer Science</strong>, Lorem ipsum University<br><span style="color:var(--text-muted);font-size:0.85rem;">Advisor: Prof. Example Advisor</span></div>
-        </li>
-        <li class="timeline-item">
-          <div class="timeline-date">2019.09 - 2022.06</div>
-          <div class="timeline-text"><strong>M.S. in Artificial Intelligence</strong>, Lorem ipsum College<br><span style="color:var(--text-muted);font-size:0.85rem;">GPA: 3.9/4.0</span></div>
-        </li>
-        <li class="timeline-item">
-          <div class="timeline-date">2015.09 - 2019.06</div>
-          <div class="timeline-text"><strong>B.S. in Computer Science</strong>, Lorem ipsum University<br><span style="color:var(--text-muted);font-size:0.85rem;">GPA: 3.8/4.0, Outstanding Graduate</span></div>
-        </li>
-      </ul>
-    </div>
-
-    <!-- ====== Invited Talks ====== -->
-    <span class="anchor" id="-invited-talks"></span>
-    <div class="section-card">
-      <h2>💬 Invited Talks</h2>
-      <ul class="timeline">
-        <li class="timeline-item">
-          <div class="timeline-date">2024.03</div>
-          <div class="timeline-text">"Towards Efficient Multi-Modal Learning", AI Summit 2024, Shanghai <a href="#">[video]</a></div>
-        </li>
-        <li class="timeline-item">
-          <div class="timeline-date">2023.11</div>
-          <div class="timeline-text">"Neural Architecture Search at Scale", TechTalk @ Google AI, Beijing</div>
-        </li>
-        <li class="timeline-item">
-          <div class="timeline-date">2023.06</div>
-          <div class="timeline-text">"Vision-Language Models for Real-World Applications", CVPR 2023 Workshop, Vancouver <a href="#">[slides]</a></div>
-        </li>
-      </ul>
-    </div>
-
-    <!-- ====== Internships ====== -->
-    <span class="anchor" id="-internships"></span>
-    <div class="section-card">
-      <h2>💼 Professional Experience</h2>
-      <ul class="timeline">
-        <li class="timeline-item">
-          <div class="timeline-date">2023.06 - 2023.12</div>
-          <div class="timeline-text"><strong>Research Intern</strong>, Google AI, Mountain View, CA<br><span style="color:var(--text-muted);font-size:0.85rem;">Working on large-scale multi-modal models with the Brain team.</span></div>
-        </li>
-        <li class="timeline-item">
-          <div class="timeline-date">2022.05 - 2022.12</div>
-          <div class="timeline-text"><strong>Research Intern</strong>, Microsoft Research Asia, Beijing<br><span style="color:var(--text-muted);font-size:0.85rem;">Developed efficient training methods for vision transformers.</span></div>
-        </li>
-        <li class="timeline-item">
-          <div class="timeline-date">2021.06 - 2021.09</div>
-          <div class="timeline-text"><strong>Software Engineer Intern</strong>, Meta (Facebook), Menlo Park<br><span style="color:var(--text-muted);font-size:0.85rem;">Built scalable data pipelines for recommendation systems.</span></div>
-        </li>
-      </ul>
+      <h2>📬 <span data-i18n="contact.title">联系方式</span></h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;">
+        <div style="display:flex;align-items:center;gap:12px;padding:14px 18px;background:var(--bg);border-radius:var(--radius-sm);">
+          <span style="font-size:1.4rem;">📧</span>
+          <div>
+            <div style="font-size:0.75rem;color:var(--text-muted);" data-i18n="contact.email">邮箱</div>
+            <div style="font-weight:600;font-size:0.88rem;">yingxiong.zhu@example.com</div>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;gap:12px;padding:14px 18px;background:var(--bg);border-radius:var(--radius-sm);">
+          <span style="font-size:1.4rem;">🏫</span>
+          <div>
+            <div style="font-size:0.75rem;color:var(--text-muted);" data-i18n="contact.institution">所属机构</div>
+            <div style="font-weight:600;font-size:0.88rem;" data-i18n="contact.institutionVal">深圳理工大学 · 深圳大学</div>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;gap:12px;padding:14px 18px;background:var(--bg);border-radius:var(--radius-sm);">
+          <span style="font-size:1.4rem;">👨‍🏫</span>
+          <div>
+            <div style="font-size:0.75rem;color:var(--text-muted);" data-i18n="contact.advisor">导师</div>
+            <div style="font-weight:600;font-size:0.88rem;" data-i18n="contact.advisorVal">尤志峰 教授</div>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;gap:12px;padding:14px 18px;background:var(--bg);border-radius:var(--radius-sm);">
+          <span style="font-size:1.4rem;">📍</span>
+          <div>
+            <div style="font-size:0.75rem;color:var(--text-muted);" data-i18n="contact.address">地址</div>
+            <div style="font-weight:600;font-size:0.88rem;" data-i18n="contact.addressVal">深圳，广东，中国</div>
+          </div>
+        </div>
+      </div>
     </div>
 
   </main>
 </div>
 
+<!-- ==================== Footer ==================== -->
+<footer class="footer">
+  <p data-i18n="footer.text">© 2026 祝英雄 | Yingxiong Zhu. All rights reserved.</p>
+</footer>
+
 <!-- ==================== Back to Top ==================== -->
 <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
 
 <script>
-/* ========== Mobile Menu ========== */
+/* ==================================================================
+   i18n - Internationalization Data
+   ================================================================== */
+const i18n = {
+  zh: {
+    'nav.brand': '祝英雄<span>·</span>HeroZhu',
+    'nav.about': '关于',
+    'nav.research': '研究方向',
+    'nav.education': '教育背景',
+    'nav.honors': '获奖荣誉',
+    'nav.contact': '联系方式',
+
+    'sidebar.name': '祝英雄',
+    'sidebar.nameEn': 'Yingxiong Zhu',
+    'sidebar.title': 'AI for Science 研究者',
+    'sidebar.affil': '深圳理工大学 · 深圳大学（联合培养）',
+    'sidebar.dept': '生物医学工程 · 人工智能交叉',
+    'sidebar.location': '深圳，中国',
+    'sidebar.scholar': '🎓 谷歌学术',
+    'sidebar.stat1': '深圳理工',
+    'sidebar.stat2': '深圳大学',
+
+    'about.title': '关于我',
+    'about.p1': '我是祝英雄，2025级硕士研究生，由深圳理工大学（SUAT）与深圳大学（SZU）联合培养，专业为生物医学工程，研究方向聚焦人工智能交叉（AI for Science）。导师为尤志峰教授。',
+    'about.p2': '目前主攻人工智能赋能组织工程，具体包括：组织三维结构分析、电生理信号解码、基于RAG结合药物库的药物筛选等方向。同时，我对AI Agent领域也有浓厚兴趣。',
+    'about.p3': '我致力于将前沿AI技术与生物医学问题深度融合，期望通过计算方法加速科学发现，为精准医疗和再生医学贡献力量。',
+
+    'research.title': '研究方向',
+    'research.mainTitle': '人工智能赋能组织工程 (AI-driven Tissue Engineering)',
+    'research.tag1': '组织三维结构分析',
+    'research.tag2': '电生理信号解码',
+    'research.tag3': 'RAG+药物库 · 药物筛选',
+    'research.tag4': 'AI for Science',
+    'research.tag5': 'AI Agent',
+    'research.card1.title': '组织三维结构分析',
+    'research.card1.desc': '利用深度学习与计算机视觉技术，对组织工程中的三维细胞支架、类器官等结构进行高通量分析与形态学量化。',
+    'research.card2.title': '电生理信号解码',
+    'research.card2.desc': '应用信号处理和机器学习方法，对神经电生理、肌电等多模态生物电信号进行解码与模式识别。',
+    'research.card3.title': 'RAG+药物库筛选',
+    'research.card3.desc': '结合检索增强生成（RAG）与大规模药物数据库，构建智能药物筛选系统，加速候选药物发现。',
+
+    'education.title': '教育背景',
+    'education.master.title': '生物医学工程硕士',
+    'education.master.school': '深圳大学（与深圳理工大学联合培养，Full study at SUAT）',
+    'education.master.detail': '人工智能交叉方向 · AI for Science · 导师：尤志峰教授',
+    'education.bachelor.title': '智能医学工程学士',
+    'education.bachelor.school': '深圳技术大学',
+    'education.bachelor.detail': '智能医学工程专业',
+
+    'honors.title': '获奖荣誉',
+    'honors.award1.title': '文体优等生奖学金',
+    'honors.award1.desc': '深圳技术大学',
+
+    'contact.title': '联系方式',
+    'contact.email': '邮箱',
+    'contact.institution': '所属机构',
+    'contact.institutionVal': '深圳理工大学 · 深圳大学',
+    'contact.advisor': '导师',
+    'contact.advisorVal': '尤志峰 教授',
+    'contact.address': '地址',
+    'contact.addressVal': '深圳，广东，中国',
+
+    'footer.text': '© 2026 祝英雄 | Yingxiong Zhu. All rights reserved.',
+  },
+
+  en: {
+    'nav.brand': 'Yingxiong<span>·</span>Zhu',
+    'nav.about': 'About',
+    'nav.research': 'Research',
+    'nav.education': 'Education',
+    'nav.honors': 'Honors',
+    'nav.contact': 'Contact',
+
+    'sidebar.name': 'Yingxiong Zhu',
+    'sidebar.nameEn': '祝英雄',
+    'sidebar.title': 'AI for Science Researcher',
+    'sidebar.affil': 'SUAT · Shenzhen University (Joint Training)',
+    'sidebar.dept': 'Biomedical Engineering · AI Interdisciplinary',
+    'sidebar.location': 'Shenzhen, China',
+    'sidebar.scholar': '🎓 Google Scholar',
+    'sidebar.stat1': 'SUAT',
+    'sidebar.stat2': 'SZU',
+
+    'about.title': 'About Me',
+    'about.p1': 'I am Yingxiong Zhu, a 2025 graduate student jointly trained by Shenzhen University of Advanced Technology (SUAT) and Shenzhen University (SZU). I major in Biomedical Engineering with a focus on AI for Science. My advisor is Prof. Zhifeng You.',
+    'about.p2': 'My current research centers on AI-driven tissue engineering, including: 3D tissue structure analysis, electrophysiological signal decoding, and RAG-based drug screening with pharmaceutical databases. I am also deeply interested in the field of AI Agents.',
+    'about.p3': 'I am dedicated to deeply integrating cutting-edge AI technologies with biomedical challenges, aiming to accelerate scientific discovery through computational methods and contribute to precision medicine and regenerative medicine.',
+
+    'research.title': 'Research Interests',
+    'research.mainTitle': 'AI-driven Tissue Engineering',
+    'research.tag1': '3D Tissue Structure Analysis',
+    'research.tag2': 'Electrophysiological Signal Decoding',
+    'research.tag3': 'RAG + Drug Library Screening',
+    'research.tag4': 'AI for Science',
+    'research.tag5': 'AI Agent',
+    'research.card1.title': '3D Tissue Structure Analysis',
+    'research.card1.desc': 'Leveraging deep learning and computer vision for high-throughput analysis and morphological quantification of 3D cell scaffolds, organoids, and tissue-engineered constructs.',
+    'research.card2.title': 'Electrophysiological Signal Decoding',
+    'research.card2.desc': 'Applying signal processing and machine learning to decode and recognize patterns in multimodal bioelectrical signals including neural electrophysiology and EMG.',
+    'research.card3.title': 'RAG + Drug Library Screening',
+    'research.card3.desc': 'Combining Retrieval-Augmented Generation (RAG) with large-scale drug databases to build intelligent drug screening systems, accelerating candidate drug discovery.',
+
+    'education.title': 'Education',
+    'education.master.title': 'M.S. in Biomedical Engineering',
+    'education.master.school': 'Shenzhen University (Joint Training with SUAT, Full study at SUAT)',
+    'education.master.detail': 'AI Interdisciplinary · AI for Science · Advisor: Prof. Zhifeng You',
+    'education.bachelor.title': 'B.S. in Intelligent Medical Engineering',
+    'education.bachelor.school': 'Shenzhen Technology University',
+    'education.bachelor.detail': 'Intelligent Medical Engineering',
+
+    'honors.title': 'Honors & Awards',
+    'honors.award1.title': 'Excellence in Sports & Culture Scholarship',
+    'honors.award1.desc': 'Shenzhen Technology University',
+
+    'contact.title': 'Contact',
+    'contact.email': 'Email',
+    'contact.institution': 'Institution',
+    'contact.institutionVal': 'SUAT · Shenzhen University',
+    'contact.advisor': 'Advisor',
+    'contact.advisorVal': 'Prof. Zhifeng You',
+    'contact.address': 'Address',
+    'contact.addressVal': 'Shenzhen, Guangdong, China',
+
+    'footer.text': '© 2026 Yingxiong Zhu | 祝英雄. All rights reserved.',
+  }
+};
+
+/* ==================================================================
+   Language Manager
+   ================================================================== */
+const LangManager = {
+  _current: 'zh',
+  get current() { return this._current; },
+  set current(lang) {
+    this._current = lang;
+    localStorage.setItem('lang', lang);
+    document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+  },
+
+  init() {
+    const saved = localStorage.getItem('lang') || 'zh';
+    this.current = saved;
+    this.apply();
+  },
+
+  apply() {
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      const text = i18n[this._current][key];
+      if (text !== undefined) {
+        // Handle inline HTML (nav.brand contains <span>)
+        if (key === 'nav.brand') {
+          el.innerHTML = text;
+        } else {
+          el.textContent = text;
+        }
+      }
+    });
+    this._updateToggle();
+  },
+
+  toggle() {
+    this.current = this._current === 'zh' ? 'en' : 'zh';
+    this.apply();
+  },
+
+  _updateToggle() {
+    const t = document.getElementById('langToggle');
+    if (!t) return;
+    if (this._current === 'zh') {
+      t.innerHTML = '<span class="active-lang">中</span><span class="divider">/</span><span>EN</span>';
+    } else {
+      t.innerHTML = '<span>中</span><span class="divider">/</span><span class="active-lang">EN</span>';
+    }
+  }
+};
+
+/* ==================================================================
+   Mobile Menu
+   ================================================================== */
 (function() {
   const toggle = document.getElementById('menuToggle');
   const nav = document.getElementById('navLinks');
@@ -539,26 +629,25 @@ h2 { font-size: 1.5rem; margin-bottom: 1.2rem; padding-bottom: 0.6rem; border-bo
     overlay.classList.remove('open');
   }
   toggle.addEventListener('click', () => {
-    const isOpen = nav.classList.contains('open');
-    if (isOpen) { close(); } else {
-      toggle.classList.add('open');
-      nav.classList.add('open');
-      overlay.classList.add('open');
-    }
+    nav.classList.contains('open') ? close() : (
+      toggle.classList.add('open'), nav.classList.add('open'), overlay.classList.add('open')
+    );
   });
   overlay.addEventListener('click', close);
   links.forEach(l => l.addEventListener('click', close));
   document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
 })();
 
-/* ========== Nav Scroll Active ========== */
+/* ==================================================================
+   Nav Scroll Active
+   ================================================================== */
 (function() {
   const sections = document.querySelectorAll('.anchor');
   const navAs = document.querySelectorAll('.nav-links a');
   window.addEventListener('scroll', () => {
     let current = '';
     sections.forEach(s => {
-      if (window.scrollY >= s.offsetTop - 120) current = s.getAttribute('id');
+      if (window.scrollY >= s.offsetTop - 150) current = s.getAttribute('id');
     });
     navAs.forEach(a => {
       a.classList.toggle('active', a.getAttribute('href') === '#' + current);
@@ -566,7 +655,9 @@ h2 { font-size: 1.5rem; margin-bottom: 1.2rem; padding-bottom: 0.6rem; border-bo
   });
 })();
 
-/* ========== Back to Top ========== */
+/* ==================================================================
+   Back to Top
+   ================================================================== */
 (function() {
   const btn = document.getElementById('backToTop');
   window.addEventListener('scroll', () => {
@@ -575,30 +666,15 @@ h2 { font-size: 1.5rem; margin-bottom: 1.2rem; padding-bottom: 0.6rem; border-bo
   btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 })();
 
-/* ========== Google Scholar Stats ========== */
-(function() {
-  const citEl = document.getElementById('totalCitations');
-  // Check if repo is set in config
-  const repo = 'RayeRen/acad-homepage.github.io';
-  const url = 'https://cdn.jsdelivr.net/gh/' + repo + '@google-scholar-stats/gs_data_shieldsio.json';
+/* ==================================================================
+   Language Toggle Button
+   ================================================================== */
+document.getElementById('langToggle').addEventListener('click', () => LangManager.toggle());
 
-  fetch(url)
-    .then(r => r.json())
-    .then(data => {
-      if (data.message && data.message.includes) {
-        // Extract citation count from shields.io schema
-        const msg = data.message;
-        const match = msg.match(/([\d,]+)/);
-        if (match && citEl) {
-          citEl.textContent = match[1];
-        }
-      }
-    })
-    .catch(() => {
-      // Fallback if stats unavailable
-      if (citEl) citEl.textContent = '10K+';
-    });
-})();
+/* ==================================================================
+   Init
+   ================================================================== */
+LangManager.init();
 </script>
 
 </body>

@@ -1,58 +1,51 @@
 ---
 permalink: /
-title: ""
-excerpt: ""
+title: "Yingxiong Zhu (祝英雄)"
+excerpt: "About me"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
 
-{% if site.google_scholar_stats_use_cdn %}
-{% assign gsDataBaseUrl = "https://cdn.jsdelivr.net/gh/" | append: site.repository | append: "@" %}
-{% else %}
-{% assign gsDataBaseUrl = "https://raw.githubusercontent.com/" | append: site.repository | append: "/" %}
-{% endif %}
-{% assign url = gsDataBaseUrl | append: "google-scholar-stats/gs_data_shieldsio.json" %}
-
 <span class='anchor' id='about-me'></span>
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. Suspendisse condimentum, libero vel tempus mattis, risus risus vulputate libero, elementum fermentum mi neque vel nisl. Maecenas facilisis maximus dignissim. Curabitur mattis vulputate dui, tincidunt varius libero luctus eu. Mauris mauris nulla, scelerisque eget massa id, tincidunt congue felis. Sed convallis tempor ipsum rhoncus viverra. Pellentesque nulla orci, accumsan volutpat fringilla vitae, maximus sit amet tortor. Aliquam ultricies odio ut volutpat scelerisque. Donec nisl nisl, porttitor vitae pharetra quis, fringilla sed mi. Fusce pretium dolor ut aliquam consequat. Cras volutpat, tellus accumsan mattis molestie, nisl lacus tempus massa, nec malesuada tortor leo vel quam. Aliquam vel ex consectetur, vehicula leo nec, efficitur eros. Donec convallis non urna quis feugiat.
+I am Yingxiong Zhu (祝英雄), a 2025 graduate student jointly trained by **Shenzhen University of Advanced Technology (SUAT)** and **Shenzhen University (SZU)**. I major in **Biomedical Engineering** with a focus on **AI for Science**. My advisor is **Prof. Zhifeng You**.
 
-My research interest includes neural machine translation and computer vision. I have published more than 100 papers at the top international AI conferences with total <a href='https://scholar.google.com/citations?user=DhtAFkwAAAAJ'>google scholar citations <strong><span id='total_cit'>260000+</span></strong></a> (You can also use google scholar badge <a href='https://scholar.google.com/citations?user=DhtAFkwAAAAJ'><img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=citations"></a>).
+My current research centers on **AI-driven tissue engineering**, including:
+- **3D tissue structure analysis** — leveraging deep learning and computer vision for high-throughput morphological quantification
+- **Electrophysiological signal decoding** — applying signal processing and ML to decode multimodal bioelectrical signals
+- **RAG-based drug screening** — combining Retrieval-Augmented Generation with pharmaceutical databases for intelligent drug discovery
 
+I am also deeply interested in the field of **AI Agents**.
+
+---
+
+我是祝英雄，2025级硕士研究生，由**深圳理工大学（SUAT）**与**深圳大学（SZU）**联合培养，专业为**生物医学工程**，研究方向聚焦**人工智能交叉（AI for Science）**。导师为**尤志峰教授**。
+
+目前主攻**人工智能赋能组织工程**，具体包括：
+- **组织三维结构分析** — 利用深度学习与计算机视觉进行高通量形态学量化
+- **电生理信号解码** — 应用信号处理与机器学习解码多模态生物电信号
+- **RAG+药物库药物筛选** — 结合检索增强生成与药物数据库实现智能药物发现
+
+同时对 **AI Agent** 领域有浓厚兴趣。
 
 # 🔥 News
-- *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
+- *2025.09*: &nbsp;🎉 入学深圳理工大学（SUAT），开始生物医学工程硕士阶段学习。
+- *2025.06*: &nbsp;🎓 毕业于深圳技术大学，获得智能医学工程学士学位。
+- *2024*: &nbsp;🏆 获得深圳技术大学文体优等生奖学金。
 
-# 📝 Publications 
-
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2016</div><img src='images/500x300.png' alt="sym" width="100%"></div></div>
-<div class='paper-box-text' markdown="1">
-
-[Deep Residual Learning for Image Recognition](https://openaccess.thecvf.com/content_cvpr_2016/papers/He_Deep_Residual_Learning_CVPR_2016_paper.pdf)
-
-**Kaiming He**, Xiangyu Zhang, Shaoqing Ren, Jian Sun
-
-[**Project**](https://scholar.google.com/citations?view_op=view_citation&hl=zh-CN&user=DhtAFkwAAAAJ&citation_for_view=DhtAFkwAAAAJ:ALROH1vI_8AC) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-</div>
-</div>
-
-- [Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet](https://github.com), A, B, C, **CVPR 2020**
+# 📖 Education
+- *2025.09 – 2028.06*, **M.S. in Biomedical Engineering**, Shenzhen University (Joint Training with SUAT, Full study at SUAT). Advisor: Prof. Zhifeng You.
+- *2021.09 – 2025.06*, **B.S. in Intelligent Medical Engineering**, Shenzhen Technology University.
 
 # 🎖 Honors and Awards
-- *2021.10* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2021.09* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
+- *2024*: Excellence in Sports & Culture Scholarship, Shenzhen Technology University.
 
-# 📖 Educations
-- *2019.06 - 2022.04 (now)*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2015.09 - 2019.06*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-
-# 💬 Invited Talks
-- *2021.06*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2021.03*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  \| [\[video\]](https://github.com/)
-
-# 💻 Internships
-- *2019.05 - 2020.02*, [Lorem](https://github.com/), China.
+# 📝 Research Interests
+- AI-driven Tissue Engineering
+- 3D Tissue Structure Analysis
+- Electrophysiological Signal Decoding
+- RAG + Drug Library Screening
+- AI for Science
+- AI Agent

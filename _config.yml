@@ -6,8 +6,8 @@
 # `jekyll serve`. If you change this file, please restart the server process.
 
 # Site Settings
-title                    : "Hero Zhu"
-description              : "Hero Zhu - Personal Academic Homepage | Research in AI, Machine Learning, and Computer Vision"
+title                    : "Yingxiong Zhu / 祝英雄"
+description              : "Yingxiong Zhu (祝英雄) - SUAT & SZU Joint Training M.S. | AI for Science, Biomedical Engineering, AI-driven Tissue Engineering"
 repository               : "RayeRen/acad-homepage.github.io"
 google_scholar_stats_use_cdn : true
 
@@ -21,14 +21,14 @@ baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.ba
 
 # Site Author
 author:
-  name             : "Lorem ipsum"
+  name             : "Yingxiong Zhu"
   avatar           : "images/android-chrome-512x512.png"
-  bio              : "Lorem ipsum College"
-  location         : "Beijing, China"
-  employer         :
+  bio              : "SUAT & SZU Joint Training M.S. Student"
+  location         : "Shenzhen, China"
+  employer         : "Shenzhen University of Advanced Technology"
   pubmed           : 
   googlescholar    : "https://scholar.google.com/citations?user=YOUR_GOOGLE_SCHOLAR_ID"
-  email            : "Lorem@ipsum.com"
+  email            : "yingxiong.zhu@example.com"
   researchgate     :  # e.g., "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
