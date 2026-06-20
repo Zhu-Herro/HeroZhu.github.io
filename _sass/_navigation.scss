@@ -174,6 +174,8 @@
 
 .greedy-nav {
   position: relative;
+  display: flex;
+  align-items: center;
   min-width: 250px;
   background: $background-color;
 
@@ -203,6 +205,7 @@
 
   .visible-links {
     display: table;
+    flex-shrink: 0;
 
     li {
       display: table-cell;
@@ -247,6 +250,37 @@
                 transform: scaleX(1); /* reveal*/
       }
     }
+  }
+
+  /* Navigation controls: lang + theme toggles */
+  .nav-controls {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding-right: 3rem;
+    flex-shrink: 0;
+  }
+  .nav-ctrl-btn {
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 3px 9px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #fff;
+    color: #888;
+    cursor: pointer;
+    white-space: nowrap;
+    line-height: 1.5;
+    transition: all 0.2s;
+    &:hover { border-color: $info-color; color: $info-color; }
+    &.active { background: $info-color; color: #fff; border-color: $info-color; }
+  }
+  .dark-mode & .nav-ctrl-btn {
+    background: #333;
+    border-color: #555;
+    color: #aaa;
+    &.active { background: #5a9fd4; color: #fff; border-color: #5a9fd4; }
   }
 
   .hidden-links {

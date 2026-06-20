@@ -3,22 +3,12 @@ layout: compress
 ---
 
 <!doctype html>
-<html lang="en" class="no-js">
+<html lang="zh-CN" class="no-js">
   <head>
     {% include head.html %}
     {% include head/custom.html %}
     <style>
-      /* Language switch */
-      .lang-switch-wrapper { margin-left: auto; display: flex; gap: 2px; align-items: center; }
-      .lang-btn {
-        font-size: 0.78rem; font-weight: 600; padding: 4px 10px;
-        border: 1px solid #ddd; border-radius: 4px;
-        background: #fff; color: #999; cursor: pointer;
-        transition: all 0.2s;
-      }
-      .lang-btn.active { background: #3d6eb0; color: #fff; border-color: #3d6eb0; }
-      .lang-btn:hover:not(.active) { border-color: #3d6eb0; color: #3d6eb0; }
-      /* Bilingual content visibility */
+      /* ======== Language switch ======== */
       .lang-zh, .lang-en { display: none; }
       html[lang="zh-CN"] .lang-zh,
       html[lang="zh-CN"] .lang-zh-inline { display: block; }
@@ -26,35 +16,77 @@ layout: compress
       html[lang="en"] .lang-en-inline { display: block; }
       html[lang="zh-CN"] .lang-zh-inline { display: inline; }
       html[lang="en"] .lang-en-inline { display: inline; }
-      /* Improved typography */
+
+      /* ======== Dark Mode Variables ======== */
+      :root {
+        --bg: #fff;
+        --bg-alt: #fafafa;
+        --text: #3d3d3d;
+        --text-muted: #777;
+        --border: #e8ecf1;
+        --card-bg: #fff;
+        --link: #3d6eb0;
+      }
+      .dark-mode {
+        --bg: #1a1a2e;
+        --bg-alt: #16213e;
+        --text: #e0e0e0;
+        --text-muted: #a0a0b0;
+        --border: #2a2a4a;
+        --card-bg: #222244;
+        --link: #7eb8ff;
+      }
+
+      /* ======== Dark mode overrides ======== */
+      .dark-mode body { background-color: var(--bg); color: var(--text); }
+      .dark-mode h1, .dark-mode h2, .dark-mode h3, .dark-mode h4, .dark-mode h5, .dark-mode h6 { color: var(--text); }
+      .dark-mode a { color: var(--link); }
+      .dark-mode .masthead { background-color: var(--bg); border-bottom-color: var(--border); }
+      .dark-mode .greedy-nav { background-color: var(--bg); }
+      .dark-mode .masthead__menu-item a { color: var(--text-muted); }
+      .dark-mode .masthead__menu-item a:hover { color: var(--text); }
+      .dark-mode .sidebar { background: var(--bg); }
+      .dark-mode .profile_box { background: transparent; }
+      .dark-mode .author__urls a { color: var(--text-muted); }
+      .dark-mode .author__urls a:hover { color: var(--text); }
+      .dark-mode .author__urls { background: var(--card-bg); border-color: var(--border); }
+      .dark-mode .author__urls:after { border-color: var(--card-bg) transparent; }
+      .dark-mode .author__urls li { color: var(--text-muted); }
+      .dark-mode .page__content h1 { border-bottom-color: var(--border); }
+      .dark-mode .author__avatar img { border-color: var(--border); }
+      .dark-mode .social-icons .fa, .dark-mode .social-icons .fas, .dark-mode .social-icons .fab, .dark-mode .social-icons .ai { color: var(--text-muted) !important; }
+      .dark-mode #main { color: var(--text); }
+      .dark-mode code { background: #2a2a44; }
+      .dark-mode .greedy-nav .hidden-links { background: var(--card-bg); border-color: var(--border); }
+      .dark-mode .greedy-nav .hidden-links a:hover { background: #333; }
+      .dark-mode .greedy-nav .hidden-links:after { border-color: var(--card-bg) transparent; }
+
+      /* ======== Typography ======== */
       .page__content { font-size: 1.05rem; line-height: 1.8; }
-      .page__content h1 { font-size: 1.6rem; margin-top: 2em; padding-bottom: 0.4em; border-bottom: 2px solid #e8ecf1; }
+      .page__content h1 { font-size: 1.6rem; margin-top: 2em; padding-bottom: 0.4em; border-bottom: 2px solid var(--border); display: flex; align-items: center; gap: 8px; }
       .page__content h2 { font-size: 1.35rem; }
       .page__content p, .page__content li { margin-bottom: 0.7em; }
       .page__content ul { padding-inline-start: 1.5em; }
-      /* Avatar circular crop */
+
+      /* ======== Avatar ======== */
       .author__avatar img {
         border-radius: 50% !important;
         object-fit: cover;
         object-position: center;
-        width: 175px;
-        height: 175px;
+        width: 175px; height: 175px;
         max-width: 175px !important;
       }
       @media (max-width: 925px) {
         .author__avatar img { width: 75px; height: 75px; }
       }
-      /* School badges in education */
+
+      /* ======== Misc ======== */
       .edu-badge { display: inline-block; vertical-align: middle; width: 24px; height: 24px; margin-right: 6px; border-radius: 4px; }
-      /* Sidebar description truncation */
       .author__urls li div[style] { font-size: 0.8rem !important; line-height: 1.5 !important; margin-bottom: 0.5em !important; }
       .author__bio { font-size: 0.88rem !important; }
       .author__urls li { font-size: 0.85rem; }
-      /* Better spacing */
       #main { margin-top: 1.5em; }
       .page__content h1:first-child { margin-top: 0.5em; }
-      /* Section headings with emoji */
-      .page__content h1 { display: flex; align-items: center; gap: 8px; }
     </style>
   </head>
 
@@ -79,30 +111,50 @@ layout: compress
     {% include scripts.html %}
 
     <script>
-      (function() {
-        // Language switcher
-        window.switchLang = function(lang) {
-          document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
-          document.getElementById('langZh').classList.toggle('active', lang === 'zh');
-          document.getElementById('langEn').classList.toggle('active', lang === 'en');
-          try { localStorage.setItem('lang', lang); } catch(e) {}
-        };
-        // Init
-        var saved = 'zh';
-        try { saved = localStorage.getItem('lang') || 'zh'; } catch(e) {}
-        switchLang(saved);
+    (function() {
+      var html = document.documentElement;
 
-        // Fix navigation smooth scroll
-        document.querySelectorAll('.visible-links a[href^="#"]').forEach(function(a) {
-          a.addEventListener('click', function(e) {
-            var target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-              e.preventDefault();
-              target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-          });
+      /* ====== Language Switcher ====== */
+      window.switchLang = function(lang) {
+        html.lang = lang === 'zh' ? 'zh-CN' : 'en';
+        var zhBtn = document.getElementById('langZh');
+        var enBtn = document.getElementById('langEn');
+        if (zhBtn) zhBtn.classList.toggle('active', lang === 'zh');
+        if (enBtn) enBtn.classList.toggle('active', lang === 'en');
+        try { localStorage.setItem('lang', lang); } catch(e) {}
+      };
+      var savedLang = 'zh';
+      try { savedLang = localStorage.getItem('lang') || 'zh'; } catch(e) {}
+      switchLang(savedLang);
+
+      /* ====== Dark Mode Toggle ====== */
+      window.toggleTheme = function() {
+        html.classList.toggle('dark-mode');
+        var isDark = html.classList.contains('dark-mode');
+        var btn = document.getElementById('themeToggle');
+        if (btn) btn.textContent = isDark ? '☀️' : '🌙';
+        try { localStorage.setItem('theme', isDark ? 'dark' : 'light'); } catch(e) {}
+      };
+      var savedTheme = 'light';
+      try { savedTheme = localStorage.getItem('theme') || 'light'; } catch(e) {}
+      var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (savedTheme === 'dark' || (savedTheme === 'light' ? false : prefersDark)) {
+        html.classList.add('dark-mode');
+        var btn = document.getElementById('themeToggle');
+        if (btn) btn.textContent = '☀️';
+      }
+
+      /* ====== Smooth scroll nav ====== */
+      document.querySelectorAll('.visible-links a[href^="#"]').forEach(function(a) {
+        a.addEventListener('click', function(e) {
+          var target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
         });
-      })();
+      });
+    })();
     </script>
 
   </body>
