@@ -50,25 +50,49 @@ I am also deeply interested in **AI Agents**.
   <span class="lang-zh">📖 教育背景</span>
 </h1>
 
-<div class="lang-en" markdown="1">
+<div class="lang-en">
 
-- <img src="images/szu-logo.png" class="edu-badge" onerror="this.style.display='none'" alt=""> **2025.09 – 2028.06** &nbsp; **M.S. in Biomedical Engineering**  
-  *Shenzhen University (Joint Training with SUAT, Full study at SUAT)*  
-  AI Interdisciplinary · AI for Science · Advisor: Prof. Zhifeng You
+<div class="edu-card">
+  <img src="images/szu-logo.png" class="edu-card-logo" onerror="this.style.display='none'" alt="SZU">
+  <div class="edu-card-body">
+    <div class="edu-card-date">2025.09 – 2028.06</div>
+    <div class="edu-card-degree">M.S. in Biomedical Engineering</div>
+    <div class="edu-card-school">Shenzhen University (Joint Training with SUAT, Full study at SUAT)</div>
+    <div class="edu-card-detail">AI Interdisciplinary · AI for Science · Advisor: Prof. Zhifeng You</div>
+  </div>
+</div>
 
-- <img src="images/sztu-logo.png" class="edu-badge" onerror="this.style.display='none'" alt=""> **2021.09 – 2025.06** &nbsp; **B.S. in Intelligent Medical Engineering**  
-  *Shenzhen Technology University*
+<div class="edu-card">
+  <img src="images/sztu-logo.png" class="edu-card-logo" onerror="this.style.display='none'" alt="SZTU">
+  <div class="edu-card-body">
+    <div class="edu-card-date">2021.09 – 2025.06</div>
+    <div class="edu-card-degree">B.S. in Intelligent Medical Engineering</div>
+    <div class="edu-card-school">Shenzhen Technology University</div>
+  </div>
+</div>
 
 </div>
 
-<div class="lang-zh" markdown="1">
+<div class="lang-zh">
 
-- <img src="images/szu-logo.png" class="edu-badge" onerror="this.style.display='none'" alt=""> **2025.09 – 2028.06** &nbsp; **生物医学工程硕士**  
-  *深圳大学（与深圳理工大学联合培养，Full study at SUAT）*  
-  人工智能交叉方向 · AI for Science · 导师：尤志峰教授
+<div class="edu-card">
+  <img src="images/szu-logo.png" class="edu-card-logo" onerror="this.style.display='none'" alt="SZU">
+  <div class="edu-card-body">
+    <div class="edu-card-date">2025.09 – 2028.06</div>
+    <div class="edu-card-degree">生物医学工程硕士</div>
+    <div class="edu-card-school">深圳大学（与深圳理工大学联合培养，Full study at SUAT）</div>
+    <div class="edu-card-detail">人工智能交叉方向 · AI for Science · 导师：尤志峰教授</div>
+  </div>
+</div>
 
-- <img src="images/sztu-logo.png" class="edu-badge" onerror="this.style.display='none'" alt=""> **2021.09 – 2025.06** &nbsp; **智能医学工程学士**  
-  *深圳技术大学*
+<div class="edu-card">
+  <img src="images/sztu-logo.png" class="edu-card-logo" onerror="this.style.display='none'" alt="SZTU">
+  <div class="edu-card-body">
+    <div class="edu-card-date">2021.09 – 2025.06</div>
+    <div class="edu-card-degree">智能医学工程学士</div>
+    <div class="edu-card-school">深圳技术大学</div>
+  </div>
+</div>
 
 </div>
 
@@ -113,4 +137,3 @@ I am also deeply interested in **AI Agents**.
   深圳
 
 </div>
-
