@@ -201,6 +201,11 @@
     background-color: $primary-color;
     color: #fff;
     cursor: pointer;
+
+    &.nav-ctrl-btn {
+      position: static;
+      height: auto;
+    }
   }
 
   .visible-links {
