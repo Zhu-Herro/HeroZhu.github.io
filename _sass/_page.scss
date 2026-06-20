@@ -49,6 +49,9 @@
 }
 
 .page__content {
+  font-size: 1.05rem;
+  line-height: 1.8;
+
   #about-me{
     margin-top: -10em;
       &:before { 
@@ -61,9 +64,9 @@
     }
   }
   h1 {
-    margin-top: 1em;
-    padding-bottom: 0.5em;
-    border-bottom: 1px solid $border-color;
+    margin-top: 2em;
+    padding-bottom: 0.4em;
+    border-bottom: 2px solid $border-color;
   }
 
   p, li, dl {

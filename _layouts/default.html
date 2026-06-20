@@ -7,6 +7,55 @@ layout: compress
   <head>
     {% include head.html %}
     {% include head/custom.html %}
+    <style>
+      /* Language switch */
+      .lang-switch-wrapper { margin-left: auto; display: flex; gap: 2px; align-items: center; }
+      .lang-btn {
+        font-size: 0.78rem; font-weight: 600; padding: 4px 10px;
+        border: 1px solid #ddd; border-radius: 4px;
+        background: #fff; color: #999; cursor: pointer;
+        transition: all 0.2s;
+      }
+      .lang-btn.active { background: #3d6eb0; color: #fff; border-color: #3d6eb0; }
+      .lang-btn:hover:not(.active) { border-color: #3d6eb0; color: #3d6eb0; }
+      /* Bilingual content visibility */
+      .lang-zh, .lang-en { display: none; }
+      html[lang="zh-CN"] .lang-zh,
+      html[lang="zh-CN"] .lang-zh-inline { display: block; }
+      html[lang="en"] .lang-en,
+      html[lang="en"] .lang-en-inline { display: block; }
+      html[lang="zh-CN"] .lang-zh-inline { display: inline; }
+      html[lang="en"] .lang-en-inline { display: inline; }
+      /* Improved typography */
+      .page__content { font-size: 1.05rem; line-height: 1.8; }
+      .page__content h1 { font-size: 1.6rem; margin-top: 2em; padding-bottom: 0.4em; border-bottom: 2px solid #e8ecf1; }
+      .page__content h2 { font-size: 1.35rem; }
+      .page__content p, .page__content li { margin-bottom: 0.7em; }
+      .page__content ul { padding-inline-start: 1.5em; }
+      /* Avatar circular crop */
+      .author__avatar img {
+        border-radius: 50% !important;
+        object-fit: cover;
+        object-position: center;
+        width: 175px;
+        height: 175px;
+        max-width: 175px !important;
+      }
+      @media (max-width: 925px) {
+        .author__avatar img { width: 75px; height: 75px; }
+      }
+      /* School badges in education */
+      .edu-badge { display: inline-block; vertical-align: middle; width: 24px; height: 24px; margin-right: 6px; border-radius: 4px; }
+      /* Sidebar description truncation */
+      .author__urls li div[style] { font-size: 0.8rem !important; line-height: 1.5 !important; margin-bottom: 0.5em !important; }
+      .author__bio { font-size: 0.88rem !important; }
+      .author__urls li { font-size: 0.85rem; }
+      /* Better spacing */
+      #main { margin-top: 1.5em; }
+      .page__content h1:first-child { margin-top: 0.5em; }
+      /* Section headings with emoji */
+      .page__content h1 { display: flex; align-items: center; gap: 8px; }
+    </style>
   </head>
 
   <body>
@@ -28,6 +77,33 @@ layout: compress
     </div>
 
     {% include scripts.html %}
+
+    <script>
+      (function() {
+        // Language switcher
+        window.switchLang = function(lang) {
+          document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+          document.getElementById('langZh').classList.toggle('active', lang === 'zh');
+          document.getElementById('langEn').classList.toggle('active', lang === 'en');
+          try { localStorage.setItem('lang', lang); } catch(e) {}
+        };
+        // Init
+        var saved = 'zh';
+        try { saved = localStorage.getItem('lang') || 'zh'; } catch(e) {}
+        switchLang(saved);
+
+        // Fix navigation smooth scroll
+        document.querySelectorAll('.visible-links a[href^="#"]').forEach(function(a) {
+          a.addEventListener('click', function(e) {
+            var target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+              e.preventDefault();
+              target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+          });
+        });
+      })();
+    </script>
 
   </body>
 </html>
