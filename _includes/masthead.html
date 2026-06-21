@@ -1,7 +1,7 @@
 <div class="masthead">
-  <div class="masthead__inner-wrap">
-    <div class="masthead__menu">
-      <nav id="site-nav" class="greedy-nav" style="display:flex !important;align-items:center !important;">
+  <div class="masthead__inner-wrap" style="display:flex !important;align-items:center !important;justify-content:space-between !important;">
+    <div class="masthead__menu" style="flex:1 !important;min-width:0 !important;">
+      <nav id="site-nav" class="greedy-nav">
         <button><div class="navicon"></div></button>
         <ul class="visible-links">
           <li class="masthead__menu-item masthead__menu-item--lg masthead__menu-home-item"><a href="#about-me">Homepage</a></li>
@@ -10,15 +10,15 @@
           {% endfor %}
         </ul>
         <ul class="hidden-links hidden"></ul>
-        <div class="nav-controls" style="margin-left:auto !important;display:flex !important;align-items:center !important;gap:8px !important;padding-right:50px !important;flex-shrink:0 !important;z-index:999 !important;position:relative !important;">
-          <button class="nav-ctrl-btn active" id="langZh" onclick="switchLang('zh')"
-            style="position:static !important;height:auto !important;right:auto !important;font-size:0.78rem !important;font-weight:700 !important;padding:6px 14px !important;border:2px solid #3d6eb0 !important;border-radius:6px !important;background:#3d6eb0 !important;color:#fff !important;cursor:pointer !important;white-space:nowrap !important;line-height:1.5 !important;min-width:auto !important;box-shadow:none !important;margin:0 !important;width:auto !important;">中</button>
-          <button class="nav-ctrl-btn" id="langEn" onclick="switchLang('en')"
-            style="position:static !important;height:auto !important;right:auto !important;font-size:0.78rem !important;font-weight:600 !important;padding:6px 14px !important;border:2px solid #d0d0d0 !important;border-radius:6px !important;background:#f8f9fa !important;color:#555 !important;cursor:pointer !important;white-space:nowrap !important;line-height:1.5 !important;min-width:auto !important;box-shadow:none !important;margin:0 !important;width:auto !important;">EN</button>
-          <button class="nav-ctrl-btn" id="themeToggle" onclick="toggleTheme()" title="切换白天/黑夜模式"
-            style="position:static !important;height:auto !important;right:auto !important;font-size:0.78rem !important;font-weight:600 !important;padding:6px 12px !important;border:2px solid #d0d0d0 !important;border-radius:6px !important;background:#f8f9fa !important;color:#555 !important;cursor:pointer !important;white-space:nowrap !important;line-height:1.5 !important;min-width:auto !important;box-shadow:none !important;margin:0 !important;width:auto !important;">🌙</button>
-        </div>
       </nav>
+    </div>
+    <div class="nav-controls" style="display:flex !important;align-items:center !important;gap:8px !important;flex-shrink:0 !important;padding-left:16px !important;">
+      <button id="langZh" onclick="switchLang('zh')"
+        style="border:2px solid #3d6eb0;border-radius:6px;background:#3d6eb0;color:#fff;font-size:0.78rem;font-weight:700;padding:6px 14px;cursor:pointer;white-space:nowrap;line-height:1.5;">中</button>
+      <button id="langEn" onclick="switchLang('en')"
+        style="border:2px solid #ccc;border-radius:6px;background:#f8f9fa;color:#666;font-size:0.78rem;font-weight:600;padding:6px 14px;cursor:pointer;white-space:nowrap;line-height:1.5;">EN</button>
+      <button id="themeToggle" onclick="toggleTheme()" title="Toggle dark/light mode"
+        style="border:2px solid #ccc;border-radius:6px;background:#f8f9fa;font-size:0.78rem;padding:6px 12px;cursor:pointer;white-space:nowrap;line-height:1.5;">🌙</button>
     </div>
   </div>
 </div>

@@ -215,21 +215,23 @@ layout: compress
     (function() {
       var html = document.documentElement;
 
-      var ACTIVE_STYLE = 'position:static !important;height:auto !important;right:auto !important;font-size:0.78rem !important;font-weight:700 !important;padding:6px 14px !important;border:2px solid #3d6eb0 !important;border-radius:6px !important;background:#3d6eb0 !important;color:#fff !important;cursor:pointer !important;white-space:nowrap !important;line-height:1.5 !important;min-width:auto !important;box-shadow:none !important;margin:0 !important;width:auto !important;';
-      var INACTIVE_STYLE = 'position:static !important;height:auto !important;right:auto !important;font-size:0.78rem !important;font-weight:600 !important;padding:6px 14px !important;border:2px solid #d0d0d0 !important;border-radius:6px !important;background:#f8f9fa !important;color:#555 !important;cursor:pointer !important;white-space:nowrap !important;line-height:1.5 !important;min-width:auto !important;box-shadow:none !important;margin:0 !important;width:auto !important;';
-
       /* ====== Language Switcher ====== */
       window.switchLang = function(lang) {
         html.lang = lang === 'zh' ? 'zh-CN' : 'en';
         var zhBtn = document.getElementById('langZh');
         var enBtn = document.getElementById('langEn');
+        var isZh = lang === 'zh';
         if (zhBtn) {
-          zhBtn.setAttribute('style', lang === 'zh' ? ACTIVE_STYLE : INACTIVE_STYLE);
-          zhBtn.classList.toggle('active', lang === 'zh');
+          zhBtn.style.background = isZh ? '#3d6eb0' : '#f8f9fa';
+          zhBtn.style.color = isZh ? '#fff' : '#666';
+          zhBtn.style.borderColor = isZh ? '#3d6eb0' : '#ccc';
+          zhBtn.style.fontWeight = isZh ? '700' : '600';
         }
         if (enBtn) {
-          enBtn.setAttribute('style', lang === 'en' ? ACTIVE_STYLE : INACTIVE_STYLE);
-          enBtn.classList.toggle('active', lang === 'en');
+          enBtn.style.background = !isZh ? '#3d6eb0' : '#f8f9fa';
+          enBtn.style.color = !isZh ? '#fff' : '#666';
+          enBtn.style.borderColor = !isZh ? '#3d6eb0' : '#ccc';
+          enBtn.style.fontWeight = !isZh ? '700' : '600';
         }
         try { localStorage.setItem('lang', lang); } catch(e) {}
       };

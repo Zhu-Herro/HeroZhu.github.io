@@ -17,29 +17,28 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-<div class="lang-en" markdown="1">
+<h1>
+  <span class="lang-en">👋 About Me</span>
+  <span class="lang-zh">👋 关于我</span>
+</h1>
 
-I am **Yingxiong Zhu (祝英雄)**, a 2025 graduate student jointly trained by **Shenzhen University of Advanced Technology (SUAT)** and **Shenzhen University (SZU)**. I major in **Biomedical Engineering** with a focus on **AI for Science**. My advisor is **Prof. Zhifeng You (尤志峰教授)**.
+<div class="lang-en">
 
-My research centers on **AI-driven tissue engineering**, including:
-- **3D tissue structure analysis** — deep learning and computer vision for high-throughput morphological quantification
-- **Electrophysiological signal decoding** — signal processing and ML for multimodal bioelectrical signals
-- **RAG-based drug screening** — Retrieval-Augmented Generation with pharmaceutical databases
+Hi there! I'm Yingxiong Zhu (祝英雄), a graduate student of the 2025 cohort in a joint training program between Shenzhen University of Advanced Technology (SUAT) and Shenzhen University (SZU). My major is Biomedical Engineering, and I work on AI for Science — basically, bringing AI into biomedical research. I'm fortunate to be advised by Prof. Zhifeng You.
 
-I am also deeply interested in **AI Agents**.
+My research revolves around AI-driven tissue engineering. I'm currently exploring things like using deep learning to analyze 3D tissue structures, decoding electrophysiological signals with machine learning, and combining large language models with drug databases (RAG) for smarter drug screening. I also find AI Agents fascinating and hope to dive deeper into that area.
+
+I'm passionate about bridging cutting-edge AI and real biomedical challenges. The goal is to make scientific discovery faster and more efficient through computation, and hopefully contribute to precision medicine along the way.
 
 </div>
 
-<div class="lang-zh" markdown="1">
+<div class="lang-zh">
 
-我是 **祝英雄（Yingxiong Zhu）**，2025级硕士研究生，由 **深圳理工大学（SUAT）** 与 **深圳大学（SZU）** 联合培养。专业为 **生物医学工程**，研究方向聚焦 **人工智能交叉（AI for Science）**，导师为 **尤志峰教授**。
+嗨，我是祝英雄（Yingxiong Zhu），2025级硕士研究生，在深圳理工大学（SUAT）和深圳大学（SZU）联合培养。专业是生物医学工程，方向是AI for Science——简单说就是把AI用到生物医学研究里。目前在尤志峰教授的指导下学习和做研究。
 
-目前主攻 **人工智能赋能组织工程**，具体包括：
-- **组织三维结构分析** — 利用深度学习与计算机视觉进行高通量形态学量化
-- **电生理信号解码** — 应用信号处理与机器学习解码多模态生物电信号
-- **RAG + 药物库药物筛选** — 结合检索增强生成与药物数据库实现智能药物发现
+我现在主要捣鼓的是怎么让AI来赋能组织工程，比如用深度学习分析组织三维结构、用机器学习解码电生理信号、把大语言模型和药物数据库结合起来（RAG）做药物筛选。对AI Agent也挺感兴趣的，希望能深入探索下去。
 
-同时对 **AI Agent** 领域有浓厚兴趣。
+我喜欢把前沿AI和真实的生物医学问题结合起来，希望通过计算的方法让科学发现更快一点，为精准医疗做点力所能及的贡献。
 
 </div>
 
